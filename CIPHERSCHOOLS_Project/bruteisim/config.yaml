@@ -1,0 +1,11 @@
+# Brute Force Configuration
+url: "http://testphp.vulnweb.com/userinfo.php"
+username: "test"
+username_field: "uname"
+password_field: "pass"
+success_indicator: "John Smith"
+failure_indicator: "you must login"
+threads: 4
+timeout: 10
+delay: 0
+progress_interval: 10 

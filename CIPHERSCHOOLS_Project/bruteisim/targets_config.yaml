@@ -1,0 +1,103 @@
+# Multiple Target Configurations for Brute Force Testing
+# This file contains configurations for various vulnerable web applications
+
+# 1. Acunetix Test Sites
+acunetix_php:
+  url: "http://testphp.vulnweb.com/userinfo.php"
+  username: "test"
+  username_field: "uname"
+  password_field: "pass"
+  success_indicator: "John Smith"
+  failure_indicator: "you must login"
+  threads: 4
+  timeout: 10
+  delay: 0
+  progress_interval: 10
+
+acunetix_html5:
+  url: "http://testhtml5.vulnweb.com/login.php"
+  username: "admin"
+  username_field: "username"
+  password_field: "password"
+  success_indicator: "welcome"
+  failure_indicator: "invalid"
+  threads: 4
+  timeout: 10
+  delay: 0
+  progress_interval: 10
+
+acunetix_asp:
+  url: "http://testasp.vulnweb.com/login.asp"
+  username: "admin"
+  username_field: "username"
+  password_field: "password"
+  success_indicator: "welcome"
+  failure_indicator: "invalid"
+  threads: 4
+  timeout: 10
+  delay: 0
+  progress_interval: 10
+
+acunetix_aspnet:
+  url: "http://testaspnet.vulnweb.com/login.aspx"
+  username: "admin"
+  username_field: "username"
+  password_field: "password"
+  success_indicator: "welcome"
+  failure_indicator: "invalid"
+  threads: 4
+  timeout: 10
+  delay: 0
+  progress_interval: 10
+
+# 2. Common DVWA Configuration (if running locally)
+dvwa:
+  url: "http://localhost/dvwa/login.php"
+  username: "admin"
+  username_field: "username"
+  password_field: "password"
+  success_indicator: "Welcome to Damn Vulnerable Web Application"
+  failure_indicator: "Login failed"
+  threads: 4
+  timeout: 10
+  delay: 0
+  progress_interval: 10
+
+# 3. OWASP Juice Shop (if running locally)
+juice_shop:
+  url: "http://localhost:3000/rest/user/login"
+  username: "admin@juice-sh.op"
+  username_field: "email"
+  password_field: "password"
+  success_indicator: "authentication"
+  failure_indicator: "Invalid email or password"
+  threads: 4
+  timeout: 10
+  delay: 0
+  progress_interval: 10
+
+# 4. OWASP WebGoat (if running locally)
+webgoat:
+  url: "http://localhost:8080/WebGoat/login"
+  username: "webgoat"
+  username_field: "username"
+  password_field: "password"
+  success_indicator: "Welcome to WebGoat"
+  failure_indicator: "Invalid username or password"
+  threads: 4
+  timeout: 10
+  delay: 0
+  progress_interval: 10
+
+# 5. bWAPP Configuration (if running locally)
+bwapp:
+  url: "http://localhost/bwapp/login.php"
+  username: "bee"
+  username_field: "login"
+  password_field: "password"
+  success_indicator: "Welcome to bWAPP"
+  failure_indicator: "Invalid credentials"
+  threads: 4
+  timeout: 10
+  delay: 0
+  progress_interval: 10 
